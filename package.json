@@ -5,7 +5,9 @@
   "author": "Wijnand Karsens <wijnandworld@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --exec babel-node --presets env index"
+    "dev": "nodemon --exec babel-node --presets env lib",
+    "build": "babel lib -d dist --presets env",
+    "serve": "pm2 start dist/index.js"
   },
   "dependencies": {
     "apollo-server-express": "^1.1.7",
